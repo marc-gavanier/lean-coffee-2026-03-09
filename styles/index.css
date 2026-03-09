@@ -1,0 +1,187 @@
+/* Variables de couleurs par thème */
+html.dark {
+  --c-primary: #06b6d4;
+  --c-secondary: #a855f7;
+  --c-accent: #ec4899;
+  --c-success: #4ade80;
+  --c-success-alt: #a3e635;
+  --c-error: #f87171;
+  --c-warning: #fbbf24;
+  --c-warning-alt: #fb923c;
+  --c-bg-start: #0a0a0a;
+  --c-bg-end: #1a1a2e;
+  --c-text: white;
+  --c-card-bg: rgba(255, 255, 255, 0.05);
+  --c-card-border: rgba(255, 255, 255, 0.1);
+}
+
+html:not(.dark) {
+  --c-primary: #0284c7;
+  --c-secondary: #a757f8;
+  --c-accent: #db2777;
+  --c-success: #16a34a;
+  --c-success-alt: #65a30d;
+  --c-error: #dc2626;
+  --c-warning: #d97706;
+  --c-warning-alt: #ea580c;
+  --c-bg-start: #f8fafc;
+  --c-bg-end: #e2e8f0;
+  --c-text: #1e293b;
+  --c-card-bg: rgba(0, 0, 0, 0.03);
+  --c-card-border: rgba(0, 0, 0, 0.1);
+}
+
+/* Backgrounds et texte de base */
+.slidev-page {
+  background: linear-gradient(135deg, var(--c-bg-start) 0%, var(--c-bg-end) 100%) !important;
+}
+.slidev-layout {
+  background: transparent;
+  color: var(--c-text);
+  height: 100%;
+  padding-top: 4rem;
+}
+
+/* Classes sémantiques - Texte */
+.text-primary { color: var(--c-primary) !important; }
+.text-secondary { color: var(--c-secondary) !important; }
+.text-accent { color: var(--c-accent) !important; }
+.text-success { color: var(--c-success) !important; }
+.text-success-alt { color: var(--c-success-alt) !important; }
+.text-error { color: var(--c-error) !important; }
+.text-warning { color: var(--c-warning) !important; }
+.text-warning-alt { color: var(--c-warning-alt) !important; }
+
+/* Classes sémantiques - Texte avec opacité */
+.text-error-muted { color: color-mix(in srgb, var(--c-error) 85%, transparent); }
+.text-warning-alt-muted { color: color-mix(in srgb, var(--c-warning-alt) 85%, transparent); }
+.text-warning-muted { color: color-mix(in srgb, var(--c-warning) 85%, transparent); }
+.text-success-alt-muted { color: color-mix(in srgb, var(--c-success-alt) 85%, transparent); }
+.text-success-muted { color: color-mix(in srgb, var(--c-success) 85%, transparent); }
+
+/* Classes sémantiques - Bordures */
+.border-primary { border-color: var(--c-primary); }
+.border-primary-muted { border-color: color-mix(in srgb, var(--c-primary) 50%, transparent); }
+.border-secondary { border-color: var(--c-secondary); }
+.border-secondary-muted { border-color: color-mix(in srgb, var(--c-secondary) 50%, transparent); }
+.border-accent { border-color: var(--c-accent); }
+.border-accent-muted { border-color: color-mix(in srgb, var(--c-accent) 50%, transparent); }
+.border-success { border-color: var(--c-success); }
+.border-success-muted { border-color: color-mix(in srgb, var(--c-success) 50%, transparent); }
+.border-error { border-color: var(--c-error); }
+.border-error-muted { border-color: color-mix(in srgb, var(--c-error) 50%, transparent); }
+.border-warning { border-color: var(--c-warning); }
+.border-warning-muted { border-color: color-mix(in srgb, var(--c-warning) 50%, transparent); }
+.border-warning-alt { border-color: var(--c-warning-alt); }
+.border-warning-alt-muted { border-color: color-mix(in srgb, var(--c-warning-alt) 50%, transparent); }
+.border-success-alt { border-color: var(--c-success-alt); }
+.border-success-alt-muted { border-color: color-mix(in srgb, var(--c-success-alt) 50%, transparent); }
+
+/* Classes sémantiques - Backgrounds */
+.bg-primary-subtle { background-color: color-mix(in srgb, var(--c-primary) 15%, transparent); }
+.bg-secondary-subtle { background-color: color-mix(in srgb, var(--c-secondary) 15%, transparent); }
+.bg-accent-subtle { background-color: color-mix(in srgb, var(--c-accent) 15%, transparent); }
+.bg-success-subtle { background-color: color-mix(in srgb, var(--c-success) 15%, transparent); }
+.bg-error-subtle { background-color: color-mix(in srgb, var(--c-error) 15%, transparent); }
+.bg-warning-subtle { background-color: color-mix(in srgb, var(--c-warning) 15%, transparent); }
+
+/* Backgrounds solides */
+.bg-error { background-color: var(--c-error); }
+.bg-success { background-color: var(--c-success); }
+
+/* Cartes */
+.bg-card { background-color: var(--c-card-bg); }
+.border-card { border-color: var(--c-card-border); }
+
+/* Shadows */
+.shadow-primary { --un-shadow-color: var(--c-primary); }
+.shadow-secondary { --un-shadow-color: var(--c-secondary); }
+.shadow-accent { --un-shadow-color: var(--c-accent); }
+.shadow-success { --un-shadow-color: var(--c-success); }
+.shadow-error { --un-shadow-color: var(--c-error); }
+.shadow-warning { --un-shadow-color: var(--c-warning); }
+.shadow-warning-alt { --un-shadow-color: var(--c-warning-alt); }
+.shadow-success-alt { --un-shadow-color: var(--c-success-alt); }
+
+/* Shadows avec opacité */
+.shadow-primary-10 { --un-shadow-color: color-mix(in srgb, var(--c-primary) 10%, transparent); }
+.shadow-secondary-10 { --un-shadow-color: color-mix(in srgb, var(--c-secondary) 10%, transparent); }
+.shadow-secondary-25 { --un-shadow-color: color-mix(in srgb, var(--c-secondary) 25%, transparent); }
+.shadow-secondary-50 { --un-shadow-color: color-mix(in srgb, var(--c-secondary) 50%, transparent); }
+.shadow-accent-10 { --un-shadow-color: color-mix(in srgb, var(--c-accent) 10%, transparent); }
+.shadow-success-10 { --un-shadow-color: color-mix(in srgb, var(--c-success) 10%, transparent); }
+.shadow-success-20 { --un-shadow-color: color-mix(in srgb, var(--c-success) 20%, transparent); }
+.shadow-success-alt-20 { --un-shadow-color: color-mix(in srgb, var(--c-success-alt) 20%, transparent); }
+.shadow-error-20 { --un-shadow-color: color-mix(in srgb, var(--c-error) 20%, transparent); }
+.shadow-warning-20 { --un-shadow-color: color-mix(in srgb, var(--c-warning) 20%, transparent); }
+.shadow-warning-alt-20 { --un-shadow-color: color-mix(in srgb, var(--c-warning-alt) 20%, transparent); }
+
+/* ========================================
+   GRADIENTS SÉMANTIQUES (préfixe grad-)
+   ======================================== */
+
+/* Classes de direction */
+.grad-to-r {
+  background-image: linear-gradient(to right, var(--grad-from), var(--grad-to));
+}
+.grad-to-r-via {
+  background-image: linear-gradient(to right, var(--grad-from), var(--grad-via), var(--grad-to));
+}
+.grad-to-br {
+  background-image: linear-gradient(to bottom right, var(--grad-from), var(--grad-to));
+}
+
+/* Classes from */
+.grad-from-primary { --grad-from: var(--c-primary); }
+.grad-from-secondary { --grad-from: var(--c-secondary); }
+.grad-from-accent { --grad-from: var(--c-accent); }
+.grad-from-success { --grad-from: var(--c-success); }
+.grad-from-success-alt { --grad-from: var(--c-success-alt); }
+.grad-from-error { --grad-from: var(--c-error); }
+.grad-from-warning { --grad-from: var(--c-warning); }
+.grad-from-warning-alt { --grad-from: var(--c-warning-alt); }
+
+/* Classes via */
+.grad-via-primary { --grad-via: var(--c-primary); }
+.grad-via-secondary { --grad-via: var(--c-secondary); }
+.grad-via-accent { --grad-via: var(--c-accent); }
+.grad-via-warning { --grad-via: var(--c-warning); }
+
+/* Classes to */
+.grad-to-primary { --grad-to: var(--c-primary); }
+.grad-to-secondary { --grad-to: var(--c-secondary); }
+.grad-to-accent { --grad-to: var(--c-accent); }
+.grad-to-success { --grad-to: var(--c-success); }
+.grad-to-success-alt { --grad-to: var(--c-success-alt); }
+.grad-to-error { --grad-to: var(--c-error); }
+.grad-to-warning { --grad-to: var(--c-warning); }
+.grad-to-warning-alt { --grad-to: var(--c-warning-alt); }
+
+/* Variantes avec opacité pour cards (20% → 5%) */
+.grad-from-primary-20 { --grad-from: color-mix(in srgb, var(--c-primary) 20%, transparent); }
+.grad-to-primary-5 { --grad-to: color-mix(in srgb, var(--c-primary) 5%, transparent); }
+.grad-from-secondary-20 { --grad-from: color-mix(in srgb, var(--c-secondary) 20%, transparent); }
+.grad-to-secondary-5 { --grad-to: color-mix(in srgb, var(--c-secondary) 5%, transparent); }
+.grad-from-accent-20 { --grad-from: color-mix(in srgb, var(--c-accent) 20%, transparent); }
+.grad-to-accent-5 { --grad-to: color-mix(in srgb, var(--c-accent) 5%, transparent); }
+.grad-from-success-20 { --grad-from: color-mix(in srgb, var(--c-success) 20%, transparent); }
+.grad-to-success-5 { --grad-to: color-mix(in srgb, var(--c-success) 5%, transparent); }
+
+/* Variantes ROTI (30% → 10%) */
+.grad-from-error-30 { --grad-from: color-mix(in srgb, var(--c-error) 30%, transparent); }
+.grad-to-error-10 { --grad-to: color-mix(in srgb, var(--c-error) 10%, transparent); }
+.grad-from-warning-alt-30 { --grad-from: color-mix(in srgb, var(--c-warning-alt) 30%, transparent); }
+.grad-to-warning-alt-10 { --grad-to: color-mix(in srgb, var(--c-warning-alt) 10%, transparent); }
+.grad-from-warning-30 { --grad-from: color-mix(in srgb, var(--c-warning) 30%, transparent); }
+.grad-to-warning-10 { --grad-to: color-mix(in srgb, var(--c-warning) 10%, transparent); }
+.grad-from-success-alt-30 { --grad-from: color-mix(in srgb, var(--c-success-alt) 30%, transparent); }
+.grad-to-success-alt-10 { --grad-to: color-mix(in srgb, var(--c-success-alt) 10%, transparent); }
+.grad-from-success-30 { --grad-from: color-mix(in srgb, var(--c-success) 30%, transparent); }
+.grad-to-success-10 { --grad-to: color-mix(in srgb, var(--c-success) 10%, transparent); }
+
+/* ROTI bar gradient (classe combinée) */
+.grad-roti-bar {
+  --grad-from: color-mix(in srgb, var(--c-error) 20%, transparent);
+  --grad-via: color-mix(in srgb, var(--c-warning) 10%, transparent);
+  --grad-to: color-mix(in srgb, var(--c-success) 20%, transparent);
+}
