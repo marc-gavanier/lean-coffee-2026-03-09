@@ -486,7 +486,7 @@ transition: slide-up
   :enter="{ opacity: 0.75, transition: { delay: 600 } }"
   class="mt-8 text-sm"
 >
-  📝 Notes sur le <a href="https://docs.numerique.gouv.fr/docs/00fece6e-4247-4909-98e6-6b973e388ce8/" class="text-cyan-400 underline">doc partagé</a>
+  📝 Notes sur le <a href="https://docs.numerique.gouv.fr/docs/00fece6e-4247-4909-98e6-6b973e388ce8/" class="text-cyan-400 underline" target="_blank">doc partagé</a>
 </div>
 
 </div>
