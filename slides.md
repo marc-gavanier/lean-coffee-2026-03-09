@@ -4,18 +4,100 @@ title: Atelier Dev - Lean Coffee
 class: text-center
 transition: slide-left
 css: unocss
+colorSchema: auto
 ---
 
 <style>
 :root {
   --slidev-theme-primary: #00d9ff;
 }
-.slidev-page {
+
+/* Dark mode */
+html.dark .slidev-page {
   background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%) !important;
 }
-.slidev-layout {
+html.dark .slidev-layout {
   background: transparent;
   color: white;
+}
+
+/* Light mode */
+html:not(.dark) .slidev-page {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important;
+}
+html:not(.dark) .slidev-layout {
+  background: transparent;
+  color: #1e293b;
+}
+
+/* Cartes et bordures - Light mode */
+html:not(.dark) .bg-white\/5 {
+  background-color: rgba(0, 0, 0, 0.03) !important;
+}
+html:not(.dark) .bg-white\/10 {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+html:not(.dark) .border-white\/10 {
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Light mode - Couleurs plus foncées pour meilleur contraste */
+html:not(.dark) .text-cyan-400 {
+  color: #0284c7 !important; /* sky-600 */
+}
+html:not(.dark) .text-purple-400 {
+  color: #7c3aed !important; /* violet-600 */
+}
+html:not(.dark) .text-pink-400 {
+  color: #db2777 !important; /* pink-600 */
+}
+html:not(.dark) .text-green-400 {
+  color: #15803d !important; /* green-700 */
+}
+html:not(.dark) .text-red-400 {
+  color: #b91c1c !important; /* red-700 */
+}
+html:not(.dark) .text-amber-400 {
+  color: #b45309 !important; /* amber-700 */
+}
+html:not(.dark) .text-orange-400 {
+  color: #c2410c !important; /* orange-700 */
+}
+html:not(.dark) .text-lime-400 {
+  color: #4d7c0f !important; /* lime-700 */
+}
+
+/* Light mode - ROTI labels avec opacité */
+html:not(.dark) .text-red-400\/70 {
+  color: rgba(185, 28, 28, 0.85) !important;
+}
+html:not(.dark) .text-orange-400\/70 {
+  color: rgba(194, 65, 12, 0.85) !important;
+}
+html:not(.dark) .text-amber-400\/70 {
+  color: rgba(180, 83, 9, 0.85) !important;
+}
+html:not(.dark) .text-lime-400\/70 {
+  color: rgba(77, 124, 15, 0.85) !important;
+}
+html:not(.dark) .text-green-400\/70 {
+  color: rgba(21, 128, 61, 0.85) !important;
+}
+
+/* Light mode - Bordures */
+html:not(.dark) .border-cyan-500\/50,
+html:not(.dark) .border-cyan-500\/30 {
+  border-color: rgba(2, 132, 199, 0.5) !important; /* sky-600 */
+}
+html:not(.dark) .border-purple-500\/30 {
+  border-color: rgba(124, 58, 237, 0.5) !important;
+}
+html:not(.dark) .border-pink-500\/30 {
+  border-color: rgba(219, 39, 119, 0.5) !important;
+}
+
+/* Common */
+.slidev-layout {
   height: 100%;
   padding-top: 4rem;
 }
@@ -415,7 +497,7 @@ transition: slide-up
   v-motion
   :initial="{ opacity: 0, y: 30 }"
   :enter="{ opacity: 1, y: 0, transition: { delay: 600, type: 'spring', stiffness: 100 } }"
-  class="flex items-center gap-3 p-3 rounded-xl bg-fuchsia-500/10 border border-fuchsia-500/30"
+  class="flex items-center gap-3 p-3 rounded-xl bg-pink-500/10 border border-pink-500/30"
 >
   <span class="text-2xl">🤖</span>
   <span class="text-sm">IA pour refacto (pas juste debug)</span>
@@ -425,7 +507,7 @@ transition: slide-up
   v-motion
   :initial="{ opacity: 0, y: 30 }"
   :enter="{ opacity: 1, y: 0, transition: { delay: 700, type: 'spring', stiffness: 100 } }"
-  class="flex items-center gap-3 p-3 rounded-xl bg-fuchsia-500/10 border border-fuchsia-500/30"
+  class="flex items-center gap-3 p-3 rounded-xl bg-pink-500/10 border border-pink-500/30"
 >
   <span class="text-2xl">🤝</span>
   <span class="text-sm">Harmonisation des pratiques</span>
@@ -435,7 +517,7 @@ transition: slide-up
   v-motion
   :initial="{ opacity: 0, y: 30 }"
   :enter="{ opacity: 1, y: 0, transition: { delay: 800, type: 'spring', stiffness: 100 } }"
-  class="flex items-center gap-3 p-3 rounded-xl bg-violet-500/10 border border-violet-500/30"
+  class="flex items-center gap-3 p-3 rounded-xl bg-purple-500/10 border border-purple-500/30"
 >
   <span class="text-2xl">✅</span>
   <span class="text-sm">Tests e2e / intégration minimum</span>
@@ -445,7 +527,7 @@ transition: slide-up
   v-motion
   :initial="{ opacity: 0, y: 30 }"
   :enter="{ opacity: 1, y: 0, transition: { delay: 900, type: 'spring', stiffness: 100 } }"
-  class="flex items-center gap-3 p-3 rounded-xl bg-violet-500/10 border border-violet-500/30"
+  class="flex items-center gap-3 p-3 rounded-xl bg-purple-500/10 border border-purple-500/30"
 >
   <span class="text-2xl">🧱</span>
   <span class="text-sm">Consolider les fondations</span>
@@ -474,7 +556,7 @@ transition: slide-up
   <a
     href="https://easyretro.io/publicboard/e1YIzGtOKOY9m4aqWCuwOVxYLlj2/4c875882-dc77-4b6f-bd42-8d4c0d89cdf3?list=true"
     target="_blank"
-    class="inline-block px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xl font-bold shadow-lg shadow-purple-500/25 hover:shadow-purple-500/50 transition-all no-underline"
+    class="inline-block px-8 py-4 rounded-full bg-gradient-to-r from-cyan-400 to-purple-500 text-white text-xl font-bold shadow-lg shadow-purple-500/25 hover:shadow-purple-500/50 transition-all no-underline"
   >
     Ouvrir EasyRetro
   </a>
